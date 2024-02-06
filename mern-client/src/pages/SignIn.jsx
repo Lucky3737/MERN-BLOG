@@ -7,6 +7,7 @@ import {
   signInSuccess,
   signInStart,
 } from "../redux/user/userSlice";
+import Oauth from "../components/Oauth";
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -81,6 +82,7 @@ export default function SignIn() {
                 onChange={handleChange}
               />
             </div>
+
             <Button
               type="submit"
               gradientDuoTone={"purpleToPink"}
@@ -94,6 +96,8 @@ export default function SignIn() {
                 "Sign In"
               )}
             </Button>
+
+            <Oauth />
           </form>
           <div className="flex gap-3 mt-5 text-sm ">
             <span>Do not Have Accout ? </span>
